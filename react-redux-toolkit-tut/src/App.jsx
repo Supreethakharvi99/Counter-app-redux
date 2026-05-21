@@ -1,7 +1,7 @@
 
 import './App.css'
-import Header from './componets/Header'
-import Product from './componets/Product'
+import Header from './components/Header'
+import Product from './components/Product'
 
 function App() {
 
