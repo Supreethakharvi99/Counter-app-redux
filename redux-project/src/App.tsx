@@ -1,12 +1,15 @@
 import {Provider} from 'react-redux'
 import './App.css'
 import store from './store/store'
+import {Container, Typography} from '@mui/material'
 
 function App() {
 
   return (
     <Provider store={store}>
-        <div>Welcome!</div>
+      <Container maxWidth="md">
+        <Typography component='h1' variant='h2'aloghTo='center'>Habit Tracker</Typography>
+      </Container>
     </Provider>
   )
 }
