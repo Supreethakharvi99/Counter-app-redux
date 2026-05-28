@@ -1,5 +1,7 @@
 import { useDispatch } from "react-redux"
-import { addItem } from "../store/slice"
+import { addItem, removeItem } from "../store/slice"
+
+
 const Product = () => {
   const dispatch = useDispatch();
 
@@ -14,6 +16,7 @@ const Product = () => {
             <p className="description">Experience gigh-quality sound with these wireless headphones. Featuring noise cancellation, long-lasting battery life, and a sleek modern design for everyday use.
             </p>
             <button onClick={()=>dispatch(addItem(1))} className='btn'>Add to Cart</button>
+            <button onClick={()=>dispatch(removeItem(1))} className='btn remove-btn'>Remove From Cart</button>
         </div>
     </div>
   )

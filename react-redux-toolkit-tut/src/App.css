@@ -118,3 +118,10 @@ nav ul li:hover{
 .btn:hover{
     background: #1d3557;
 }
+.remove-btn{
+    background: #e63946;
+    margin-left: 10px;
+}
+.remove-btn:hover{
+    background:#af2631 ;
+}

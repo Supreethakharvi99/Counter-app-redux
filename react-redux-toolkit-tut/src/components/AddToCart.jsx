@@ -11,7 +11,7 @@ const AddToCart = () => {
         className="cart-icon"
         alt="cart"
       />
-      <span className="cart-count">0</span>
+      <span className="cart-count">{selector}</span>
     </div>
   );
 };
