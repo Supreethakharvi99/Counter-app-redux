@@ -171,3 +171,9 @@ nav ul li:hover{
 .rating{
     font-size: 13px;
 }
+.btn-disabled{
+    background: gainsboro;
+}
+.btn-disabled:hover{
+    background: gainsboro;
+}

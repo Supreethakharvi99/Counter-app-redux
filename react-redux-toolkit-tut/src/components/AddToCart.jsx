@@ -1,8 +1,8 @@
 import { useSelector } from "react-redux";
 
 const AddToCart = () => {
-  const selector = useSelector((state)=>state.cart.value);
-  console.log(selector);
+  const cartSelector = useSelector((state)=>state.cart.items);
+  console.log(cartSelector.length);
   
   return (
     <div className="cart">
@@ -11,7 +11,7 @@ const AddToCart = () => {
         className="cart-icon"
         alt="cart"
       />
-      <span className="cart-count">{selector}</span>
+      <span className="cart-count">{cartSelector.length?cartSelector.length:0}</span>
     </div>
   );
 };
