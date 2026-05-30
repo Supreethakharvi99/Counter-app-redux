@@ -27,17 +27,26 @@ const addToCart = createSlice({
             state.items.push(action.payload)
             localStorage.setItem('cart', JSON.stringify(state.items))
         },
+       
         removeItem: (state, action) => {
             const cartData = state.items.filter(item => item.id !== action.payload.id)
             state.items = cartData;
             localStorage.setItem('cart', JSON.stringify(cartData))
         },
+        updateQuantity: (state, action) => {
+            const { id, quantity } = action.payload;
+            const item = state.items.find(item => item.id === id);
+            if (item) {
+                item.quantity = quantity;
+            }
+            localStorage.setItem('cart', JSON.stringify(state.items));
+        },
         clearAllItem: (state) => {
             state.items = []; // Fixed: updated state.items instead of state.value
-            localStorage.removeItem('cart'); // Clean up localStorage too
+            
         }
     }
 })
 
-export const { addItem, removeItem, clearAllItem } = addToCart.actions
+export const { addItem, removeItem, updateQuantity,clearAllItem } = addToCart.actions
 export default addToCart.reducer
